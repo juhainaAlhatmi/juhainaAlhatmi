@@ -1,13 +1,14 @@
+import datetime
+
 from pydantic import BaseModel
 
 
-class Item(BaseModel):
-    name: str
-    price : float
+def emoployeeRouter():
+    return None
 
 
 class Goal(BaseModel):
-    GoalsOfTeam: str
+    GoalsOfTeam: str = None
 
 
 class EventD(BaseModel):
@@ -19,12 +20,14 @@ class Time(BaseModel):
 class Place(BaseModel):
     Place: str
 
-class GoalsE(BaseModel):
-    EventGoals: str
-
 
 class Expected(BaseModel):
     ExpectedCost: float
+
+
+class GoalsE(BaseModel):
+    EventGoals: str
+
 
 class Need(BaseModel):
     NeedofEvent: str
@@ -76,7 +79,7 @@ class Remaining(BaseModel):
 
 
 class Team(BaseModel):
-    name: str
+    name: str = None
     admin:str
     gaols:str
 
@@ -87,7 +90,7 @@ class JoinT(BaseModel):
 
 
 class InfoEvent(BaseModel):
-   sponsorName: str
+   sponsorName: str = None
    LevelOfEvent: str
    TypeOfEvent: str
    Status: str
@@ -102,7 +105,7 @@ class Exchange(BaseModel):
     RemainingBalance: float
 
 class EventDetails(BaseModel):
-    Evenetname: str
+    Evenetname: str = None
     Time: datetime
     place: str
     GoalsOfEvent: str
@@ -127,8 +130,5 @@ class BudgetInfo(BaseModel):
 
 class Goal(BaseModel):
     GoalsOfTeam: str
-
-
-
 
 
