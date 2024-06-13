@@ -1,4 +1,4 @@
-import datetime
+from datetime import datetime
 
 from pydantic import BaseModel
 
@@ -14,19 +14,21 @@ class Goal(BaseModel):
 class EventD(BaseModel):
     Event_Date: str
 
+
 class Time(BaseModel):
     Time: int
+
 
 class Place(BaseModel):
     Place: str
 
 
-class Expected(BaseModel):
-    ExpectedCost: float
-
-
 class GoalsE(BaseModel):
     EventGoals: str
+
+
+class Expected(BaseModel):
+    ExpectedCost: float
 
 
 class Need(BaseModel):
@@ -40,8 +42,10 @@ class Summary(BaseModel):
 class Organizer(BaseModel):
     NameOfOrganizer: str
 
+
 class Partcipant(BaseModel):
-    NameOfPartcipant : str
+    NameOfPartcipant: str
+
 
 class Sponsor(BaseModel):
     SponsorName: str
@@ -50,29 +54,37 @@ class Sponsor(BaseModel):
 class Level(BaseModel):
     LevelOfEvent: str
 
+
 class Type(BaseModel):
     TypeOfEvent: str
+
 
 class Room(BaseModel):
     Room: str
 
+
 class Cost(BaseModel):
     TotalCost: float
 
-class Internal(BaseModel):
-    InternalSupport: float
+class Money(BaseModel):
+     InternalCost: float
+     ExternalCost:float
 
-
-class External(BaseModel):
-    ExternalSupport: float
-
-
-class Expenses(BaseModel):
-    Expenses: float
+# class Internal(BaseModel):
+#     InternalSupport: float
+#
+#
+# class External(BaseModel):
+#     ExternalSupport: float
+#
+#
+# class Expenses(BaseModel):
+#     Expenses: float
 
 
 class Add(BaseModel):
     AddBalance: str
+
 
 class Remaining(BaseModel):
     RemainingBalance: float
@@ -80,8 +92,8 @@ class Remaining(BaseModel):
 
 class Team(BaseModel):
     name: str = None
-    admin:str
-    gaols:str
+    admin: str
+    gaols: str
 
 
 class JoinT(BaseModel):
@@ -90,10 +102,10 @@ class JoinT(BaseModel):
 
 
 class InfoEvent(BaseModel):
-   sponsorName: str = None
-   LevelOfEvent: str
-   TypeOfEvent: str
-   Status: str
+    sponsorName: str = None
+    LevelOfEvent: str
+    TypeOfEvent: str
+    Status: str
 
 
 class Booking(BaseModel):
@@ -104,6 +116,7 @@ class Exchange(BaseModel):
     AddBalance: float
     RemainingBalance: float
 
+
 class EventDetails(BaseModel):
     Evenetname: str = None
     Time: datetime
@@ -111,24 +124,22 @@ class EventDetails(BaseModel):
     GoalsOfEvent: str
     ExpectedCost: float
     FocusOfEvent: str
-    SummaryOfEvent:str
+    SummaryOfEvent: str
     Needs: str
     NameOfOrganizer: str
     NumberOfParticpate: int
 
 
 class CostEvent(BaseModel):
-   TotalCost:float
-   InternalCost:float
-   ExternalCost: float
-   Expenses: float
+    TotalCost: float
+    InternalCost: float
+    ExternalCost: float
+    Expenses: float
 
 
 class BudgetInfo(BaseModel):
-   BudgetDate_Use: datetime
-   BudgetCost_Use:float
+    BudgetDate_Use: datetime
+    BudgetCost_Use: float
 
-class Goal(BaseModel):
-    GoalsOfTeam: str
 
 

@@ -7,7 +7,7 @@ from models.employee_models import *
 employeeRouter = APIRouter()
 
 
-
+#all routers
 @employeeRouter.get("/hellowEmployee")
 async def hellowE():
     return "hi employee"
@@ -132,18 +132,23 @@ async def create_room(room : Room):
 async def create_cost(cost : Cost):
     return {"The Cost of Event : ": cost}
 
+@employeeRouter.post("/money")
+async def money(money : Money):
+    return mmoney
 
-@employeeRouter.post("/internal")
-async def create_internal(internal: Internal):
-    return {"The internal cost is : ":internal}
+# @employeeRouter.post("/internal")
+# async def create_internal(internal: Internal):
+#     return {"The internal cost is : ":internal}
+#
+# @employeeRouter.post("/external")
+# async def create_external(external : External):
+#     return {"The external cost is : ":external}
+#
+# @employeeRouter.post("/expenses")
+# async def create_expenses(expenses : Expenses):
+#     return {"the event expensive : ": expenses}
 
-@employeeRouter.post("/external")
-async def create_external(external : External):
-    return {"The external cost is : ":external}
 
-@employeeRouter.post("/expenses")
-async def create_expenses(expenses : Expenses):
-    return {"the event expensive : ": expenses}
 
 @employeeRouter.post("/add")
 async def create_add(add : Add):
